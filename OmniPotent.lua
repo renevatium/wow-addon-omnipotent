@@ -1,4 +1,4 @@
--- OmniPotent v1.0.6
+-- OmniPotent v1.0.7
 -- =====================================================================
 -- Copyright (C) 2014 Lock of War, Developmental (Pty) Ltd
 --
@@ -86,7 +86,6 @@ end
 function OmniPotent:PlayerLogin()
   self.player.NAME = UnitName('player');
   self.player.CLASS = select(2, UnitClass('player'));
-  self.player.SPEC = select(2, GetSpecializationInfo(GetSpecialization()));
   self.player.FACTION = GetBattlefieldArenaFaction();
 end
 
