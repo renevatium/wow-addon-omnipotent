@@ -1,0 +1,34 @@
+OmniPotent v1.0.3
+=====================================================================
+Copyright (C) 2014 Lock of War, Developmental (Pty) Ltd
+
+RAID STYLE UNIT FRAMES in ARENA
+ENEMY AND PARTY FRAME GROUPS
+POKEMON NAMES for RUSSIAN TARGET CALLING
+
+Supports Warlords of Draenor v6.2.0
+
+CHECK OUT THE ADDON IN ACTION WITH SACHIE
+http://youtube.com/c/lockofwar
+
+SEND BUGS or FEATURE REQUESTS TO
+http://twitter.com/renevatium OR hello@renevatium.com
+
+WANT to BETA TEST NEW VERSIONS? We always need testers: hello@renevatium.com
+
+Right-click drag to MOVE (only while options panel is open)
+To avoid taint, options that alter the UI are disabled during battle
+
+MORE FEEDBACK PLEASE!
+We want to hear you ideas/issues
+
+SLASH COMMANDS
+---------------------------------------------------------------------
+/omnipotent, /omni, /op hide|show - Quick hide/show for during battle
+/omnipotent, /omni, /op - Open interface options panel
+
+LICENSE
+---------------------------------------------------------------------
+This Work is provided under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0
+International Public License. For more information see LICENSE.txt included with this distribution
+or visit https://creativecommons.org/licenses/by-nc-nd/4.0/ for the full text.

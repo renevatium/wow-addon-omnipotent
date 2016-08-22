@@ -1,0 +1,17 @@
+## Interface: 60200
+## Author: Renevatium
+## Version: 1.0.3
+## Title: OmniPotent
+## DefaultState: Enabled
+## SavedVariables: OMNIPOTENT_OPTIONS
+## Notes: Be OP
+
+OmniPotentAuras.xml
+OmniPotentAuras.lua
+OmniPotentRange.lua
+OmniPotentUnit.xml
+OmniPotentUnit.lua
+OmniPotentGroup.xml
+OmniPotentGroup.lua
+OmniPotentOptions.xml
+OmniPotent.lua
