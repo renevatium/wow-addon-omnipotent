@@ -73,18 +73,21 @@ function OmniPotentGroup:New(group, friendly)
   this.frame:SetScript('OnUpdate', function(frame, ...) this:OnUpdate(...); end);
   this.frame:SetScript('OnDragStart', function(frame, ...) this:OnDragStart(...); end);
   this.frame:SetScript('OnDragStop', function(frame, ...) this:OnDragStop(...); end);
+  this.frame:RegisterEvent('ARENA_OPPONENT_UPDATE');
+  this.frame:RegisterEvent('ARENA_PREP_OPPONENT_SPECIALIZATIONS');
+  this.frame:RegisterEvent('GROUP_ROSTER_UPDATE');
+  this.frame:RegisterEvent('UPDATE_WORLD_STATES');
   this:InitFrame();
   this:CreateFrames();
   return this;
 end
 
 function OmniPotentGroup:Activate()
-  self.frame:RegisterEvent('GROUP_ROSTER_UPDATE');
-  self.frame:RegisterEvent('ARENA_OPPONENT_UPDATE');
-  self.frame:RegisterEvent('ARENA_PREP_OPPONENT_SPECIALIZATIONS');
+  self.frame:RegisterEvent('UNIT_NAME_UPDATE');
   self.frame:RegisterEvent('PLAYER_TARGET_CHANGED');
   self.frame:RegisterEvent('UNIT_TARGET');
   self.frame:RegisterEvent('PLAYER_DEAD');
+  self:GroupRosterUpdate();
   self:Show();
 end
 
@@ -171,6 +174,7 @@ function OmniPotentGroup:GroupRosterUpdate()
         table.insert(self.units, { unit='raid'..i, name=nil, display=nil, class=nil, spec=nil, role=nil, icon=nil });
       end
     end
+    self:ArenaOpponentUpdate();
     self.update_units = true;
   end
 end
@@ -180,12 +184,12 @@ function OmniPotentGroup:ArenaOpponentUpdate()
     self.next_name = 1;
     self.units = table.wipe(self.units);
     for i=1, self.max do
-      local unit = 'arena'..i;
-      local name = GetUnitName(unit) or 'Unknown';
       local id = GetArenaOpponentSpec(i);
       if id then
         local _, spec, _, icon, _, role, class = GetSpecializationInfoByID(id);
         if spec then
+          local unit = 'arena'..i;
+          local name = GetUnitName(unit, true) or 'Unknown';
           table.insert(self.units, {
             unit=unit,
             name=name,
@@ -197,6 +201,7 @@ function OmniPotentGroup:ArenaOpponentUpdate()
           });
         end
       end
+
     end
     table.sort(self.units, SortUnits);
     self.update_units = true;
@@ -245,11 +250,10 @@ function OmniPotentGroup:Destroy()
       self.frames[i]:Destroy();
     end
   end
-  self.frame:UnregisterEvent('GROUP_ROSTER_UPDATE');
-  self.frame:UnregisterEvent('ARENA_OPPONENT_UPDATE');
-  self.frame:UnregisterEvent('ARENA_PREP_OPPONENT_SPECIALIZATIONS');
+  self.frame:UnregisterEvent('UNIT_NAME_UPDATE');
   self.frame:UnregisterEvent('PLAYER_TARGET_CHANGED');
   self.frame:UnregisterEvent('UNIT_TARGET');
+  self.frame:UnregisterEvent('PLAYER_DEAD');
   self.units = table.wipe(self.units);
   self:Hide();
 end
@@ -278,6 +282,8 @@ function OmniPotentGroup:OnUpdate(time)
     end
     self.frame:SetSize(101, math.min(#self.units, #self.frames)*self.frames[1].frame:GetHeight()+14);
     self.update_units = false;
+  elseif #self.units == 0 then
+    self:GroupRosterUpdate();
   end
   self.update = 0;
 end
@@ -286,6 +292,7 @@ function OmniPotentGroup:OnEvent(event, ...)
   if event == 'GROUP_ROSTER_UPDATE' then self:GroupRosterUpdate();
   elseif event == 'ARENA_OPPONENT_UPDATE' then self:ArenaOpponentUpdate();
   elseif event == 'ARENA_PREP_OPPONENT_SPECIALIZATIONS' then self:ArenaOpponentUpdate();
+  elseif event == 'UPDATE_WORLD_STATES' then self:GroupRosterUpdate();
   elseif event == 'PLAYER_TARGET_CHANGED' then self:PlayerTargetChanged(...);
   elseif event == 'UNIT_TARGET' then self:UnitTarget(...);
   elseif event == 'PLAYER_REGEN_ENABLED' then self:PlayerRegenEnabled();
@@ -312,7 +319,7 @@ function OmniPotentGroup:Transliterate(name)
 end
 
 function OmniPotentGroup:Transmute(name)
-  if self:IsUTF8(name) then
+  if name and self:IsUTF8(name) then
     name = NAME_OPTIONS[self.next_name];
     self.next_name = self.next_name+1;
   end

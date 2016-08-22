@@ -1,4 +1,4 @@
--- OmniPotent v1.0.3
+-- OmniPotent v1.0.4
 -- =====================================================================
 -- Copyright (C) 2014 Lock of War, Developmental (Pty) Ltd
 --
@@ -8,13 +8,14 @@
 -- Please send any bugs or feedback to omnipotent@lockofwar.com.
 -- Debug /run print((select(4, GetBuildInfo())));
 
+local WIDTH = GetScreenWidth()*UIParent:GetEffectiveScale();
 local DEFAULT_OPTIONS = {
-  VERSION=1.03,
+  VERSION=1.04,
   ENABLED=true,
   FRIENDLY=true,
   POSITION={
-    HARMFUL={ 'RIGHT', nil, 'RIGHT', -200, 0 },
-    HELPFUL={ 'LEFT', nil, 'LEFT', 200, 0 }
+    HARMFUL={ 'TOPLEFT', nil, 'TOPLEFT', WIDTH+200, -200 },
+    HELPFUL={ 'TOPLEFT', nil, 'TOPLEFT', 200, -200 }
   },
   BORDERLESS=false,
   ICONS=true,
@@ -34,7 +35,7 @@ OmniPotent = CreateFrame('Frame', 'OmniPotent', UIParent);
 function OmniPotent:Load()
   self.active=false;
   self.version=DEFAULT_OPTIONS.VERSION;
-  self.version_text='v1.0.3';
+  self.version_text='v1.0.4';
   self.frames={};
   self.player={};
   self.objectives=false;
@@ -111,7 +112,7 @@ end
 function OmniPotent:InitOptions()
   self.options_frame = CreateFrame('Frame', 'OmniPotentOptions', UIParent, 'OmniPotentOptionsTemplate');
   self.options_frame.name = GetAddOnMetadata('OmniPotent', 'Title');
-  self.options_frame.Title:SetText(string.upper('Battlegrounds'));
+  self.options_frame.Title:SetText(string.upper('Arena/Skirmish'));
   self.options_frame.Subtitle:SetText('OmniPotent '..self.version_text);
   self.options_frame.okay = function() OmniPotent:SaveOptions(); end;
   self.options_frame.default = function() OmniPotent:DefaultOptions(); end;

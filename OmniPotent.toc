@@ -1,6 +1,6 @@
 ## Interface: 60200
 ## Author: Renevatium
-## Version: 1.0.3
+## Version: 1.0.4
 ## Title: OmniPotent
 ## DefaultState: Enabled
 ## SavedVariables: OMNIPOTENT_OPTIONS

@@ -1,9 +1,14 @@
-OmniPotent v1.0.3
+OmniPotent v1.0.4
 =====================================================================
 Copyright (C) 2014 Lock of War, Developmental (Pty) Ltd
 
 Warlords of Draenor v6.2.0
 ---------------------------------------------------------------------
+27/08/2015
+v1.0.4
+Fixed loading sequence
+Fixed right to left display
+
 21/08/2015
 v1.0.3
 Fixed range tracking

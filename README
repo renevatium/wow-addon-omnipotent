@@ -1,4 +1,4 @@
-OmniPotent v1.0.3
+OmniPotent v1.0.4
 =====================================================================
 Copyright (C) 2014 Lock of War, Developmental (Pty) Ltd
 
@@ -7,6 +7,9 @@ ENEMY AND PARTY FRAME GROUPS
 POKEMON NAMES for RUSSIAN TARGET CALLING
 
 Supports Warlords of Draenor v6.2.0
+
+Download MrTarget for BATTLEGROUNDS
+http://www.curse.com/addons/wow/mrtarget
 
 CHECK OUT THE ADDON IN ACTION WITH SACHIE
 http://youtube.com/c/lockofwar
@@ -17,6 +20,7 @@ http://twitter.com/renevatium OR hello@renevatium.com
 WANT to BETA TEST NEW VERSIONS? We always need testers: hello@renevatium.com
 
 Right-click drag to MOVE (only while options panel is open)
+Left to right unit frame display is automatic based on screen position
 To avoid taint, options that alter the UI are disabled during battle
 
 MORE FEEDBACK PLEASE!
@@ -24,7 +28,6 @@ We want to hear you ideas/issues
 
 SLASH COMMANDS
 ---------------------------------------------------------------------
-/omnipotent, /omni, /op hide|show - Quick hide/show for during battle
 /omnipotent, /omni, /op - Open interface options panel
 
 LICENSE

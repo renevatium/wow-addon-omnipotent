@@ -94,6 +94,11 @@ function OmniPotentUnit:SetUnit(unit, name, display, class, spec, role, icon, te
   end
 end
 
+function OmniPotentUnit:SetName(name, display)
+  self.name = name;
+  self.display = display;
+end
+
 function OmniPotentUnit:UnsetUnit()
   self.name = nil;
   self.display = nil;
@@ -208,7 +213,7 @@ end
 
 function OmniPotentUnit:OnUpdate(time)
   self.update = self.update + time;
-  if self.update < 0.1 then
+  if self.update < 0.2 then
     return;
   end
   self.update = 0;
