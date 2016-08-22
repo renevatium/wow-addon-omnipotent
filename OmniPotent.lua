@@ -1,4 +1,4 @@
--- OmniPotent v1.0.7
+-- OmniPotent v1.0.8
 -- =====================================================================
 -- Copyright (C) 2014 Lock of War, Developmental (Pty) Ltd
 --
