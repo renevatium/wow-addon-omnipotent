@@ -28,22 +28,37 @@ function OmniPotentRange:New(parent)
   return this;
 end
 
+local function SortByRange(u,v)
+  if v and u then
+    if u.range > v.range then
+      return true;
+    end
+  elseif u then
+    return true;
+  end
+end
+
 function OmniPotentRange:UpdateSpells()
   self.harmful = table.wipe(self.harmful);
   self.helpful = table.wipe(self.helpful);
   local numTabs = GetNumSpellTabs();
   for i=1,numTabs do
     local name,texture,offset,numSpells = GetSpellTabInfo(i);
-    for id=1,numSpells do
+    for j=1,numSpells do
+      local id = j+offset;
       local name, rank = GetSpellBookItemName(id, 'spell');
       local range = select(6, GetSpellInfo(name));
-      if IsHarmfulSpell(id, 'spell') then
-        table.insert(self.harmful, { name=name, range=range });
-      elseif IsHelpfulSpell(id, 'spell') then
-        table.insert(self.helpful, { name=name, range=range });
+      if range then
+        if IsHarmfulSpell(id, 'spell') then
+          table.insert(self.harmful, { name=name, range=range });
+        elseif IsHelpfulSpell(id, 'spell') then
+          table.insert(self.helpful, { name=name, range=range });
+        end
       end
     end
   end
+  table.sort(self.harmful, SortByRange)
+  table.sort(self.helpful, SortByRange)
 end
 
 function OmniPotentRange:GetHarmfulRange()

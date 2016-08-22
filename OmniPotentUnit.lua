@@ -169,6 +169,13 @@ function OmniPotentUnit:UnitPowerColor()
   self.frame.POWER_BAR:SetStatusBarColor(color.r, color.g, color.b);
 end
 
+function OmniPotentUnit:SetAlpha(alpha)
+  self:UnitHealthColor(alpha);
+  self:UnitPowerColor(alpha);
+  self.frame.SPEC_ICON:SetAlpha(alpha);
+  self.frame:SetAlpha(alpha);
+end
+
 function OmniPotentUnit:UnitUpdate()
   if self.unit then
     self.last_update = GetTime();
@@ -234,9 +241,9 @@ function OmniPotentUnit:UpdateDisplay()
   self:UnitPowerColor();
   self:ResetTargetMacro();
   if OmniPotent.OPTIONS.RANGE and self.range == nil then
-    self.frame:SetAlpha(0.5);
+    self:SetAlpha(0.5);
   else
-    self.frame:SetAlpha(1);
+    self:SetAlpha(1);
   end
 end
 

@@ -1,10 +1,15 @@
-OmniPotent v1.0.8
+OmniPotent v1.0.9
 =====================================================================
 Copyright (C) 2014 Lock of War, Developmental (Pty) Ltd
 
 Warlords of Draenor v7.0.3
 ---------------------------------------------------------------------
 16/04/2016
+v1.0.9
+Full fade when out of range
+Fixed range logic
+
+21/07/2016
 v1.0.8
 Updated to support patch 7.0.3 (70000)
 
