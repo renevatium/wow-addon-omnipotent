@@ -1,8 +1,14 @@
-OmniPotent v1.0.4
+OmniPotent v1.0.5
 =====================================================================
 Copyright (C) 2014 Lock of War, Developmental (Pty) Ltd
 
-Warlords of Draenor v6.2.0
+Warlords of Draenor v6.2.2
+---------------------------------------------------------------------
+07/09/2015
+v1.0.5
+Updated to support patch 6.2.2 (60200)
+
+Warlords of Draenor v6.2.1
 ---------------------------------------------------------------------
 27/08/2015
 v1.0.4
@@ -11,9 +17,12 @@ Fixed right to left display
 
 21/08/2015
 v1.0.3
+Updated to support patch 6.2.1 (60200)
 Fixed range tracking
 Fixed objectives frame toggle
 
+Warlords of Draenor v6.2.0
+---------------------------------------------------------------------
 18/08/2015
 v1.0.2
 Auras now display DEBUFFS only

@@ -1,4 +1,4 @@
-OmniPotent v1.0.4
+OmniPotent v1.0.5
 =====================================================================
 Copyright (C) 2014 Lock of War, Developmental (Pty) Ltd
 
@@ -6,7 +6,7 @@ RAID STYLE UNIT FRAMES in ARENA
 ENEMY AND PARTY FRAME GROUPS
 POKEMON NAMES for RUSSIAN TARGET CALLING
 
-Supports Warlords of Draenor v6.2.0
+Supports Warlords of Draenor v6.2.2
 
 Download MrTarget for BATTLEGROUNDS
 http://www.curse.com/addons/wow/mrtarget
@@ -17,10 +17,9 @@ http://youtube.com/c/lockofwar
 SEND BUGS or FEATURE REQUESTS TO
 http://twitter.com/renevatium OR hello@renevatium.com
 
-WANT to BETA TEST NEW VERSIONS? We always need testers: hello@renevatium.com
-
 Right-click drag to MOVE (only while options panel is open)
-Left to right unit frame display is automatic based on screen position
+Unit frame orientation is automatic based on screen position
+Objectives frame will be collapsed during battle
 To avoid taint, options that alter the UI are disabled during battle
 
 MORE FEEDBACK PLEASE!
