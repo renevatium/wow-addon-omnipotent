@@ -35,7 +35,7 @@ function OmniPotentAuras:SetAura(count, frame, id, name, duration, expires, icon
     frame.icon = icon;
     frame.ICON:SetTexture(icon);
     frame:ClearAllPoints();
-    if self.parent.reverse then frame:SetPoint('TOPRIGHT', frame:GetParent(), 'TOPLEFT', -4-((count-1)*38), 0);
+    if self.parent.parent.reverse then frame:SetPoint('TOPRIGHT', frame:GetParent(), 'TOPLEFT', -4-((count-1)*38), 0);
     else frame:SetPoint('TOPLEFT', frame:GetParent(), 'TOPRIGHT', 4+((count-1)*38), 0);
     end
     return 1;
@@ -92,7 +92,7 @@ function OmniPotentAuras:UpdatePositions()
   for i=1,self.max do
     if self.frames[i].id then
       self.frames[i]:ClearAllPoints();
-      if self.parent.reverse then self.frames[i]:SetPoint('TOPRIGHT', self.frames[i]:GetParent(), 'TOPLEFT', -4-((count-1)*38), 0);
+      if self.parent.parent.reverse then self.frames[i]:SetPoint('TOPRIGHT', self.frames[i]:GetParent(), 'TOPLEFT', -4-((count-1)*38), 0);
       else self.frames[i]:SetPoint('TOPLEFT', self.frames[i]:GetParent(), 'TOPRIGHT', 4+((count-1)*38), 0);
       end
       count = count+1;

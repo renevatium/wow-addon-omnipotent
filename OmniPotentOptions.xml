@@ -29,7 +29,7 @@
             <Anchor point="TOPLEFT" relativeTo="$parentTitleSize" relativePoint="BOTTOMLEFT" x="0" y="-55"/>
           </Anchors>
         </FontString>
-        <FontString name="$parentErrors" inherits="GameFontHighlightSmall" justifyH="LEFT" text="Please send any bugs or feedback to omnipotent@lockofwar.com or tweet @lockofwar #OmniPotent for help">
+        <FontString name="$parentErrors" inherits="GameFontHighlightSmall" justifyH="LEFT" text="Please send any bugs or feedback to omnipotent@lockofwar.com or tweet @renevatium #OmniPotent">
           <Anchors>
             <Anchor point="BOTTOMLEFT" x="16" y="16"/>
             <Anchor point="BOTTOMRIGHT" x="-16" y="16"/>

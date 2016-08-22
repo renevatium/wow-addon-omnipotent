@@ -203,7 +203,6 @@ function OmniPotentGroup:ArenaOpponentUpdate()
       end
 
     end
-    table.sort(self.units, SortUnits);
     self.update_units = true;
   end
 end
@@ -375,7 +374,6 @@ function OmniPotentGroup:CreateStub(names)
         unit=names[i]
       });
     end
-    table.sort(self.units, SortUnits);
   else
     for i=1, self.max do
       self.units[i].display = self:GetDisplayName(names[i]);

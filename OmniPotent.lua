@@ -1,4 +1,4 @@
--- OmniPotent v1.0.5
+-- OmniPotent v1.0.6
 -- =====================================================================
 -- Copyright (C) 2014 Lock of War, Developmental (Pty) Ltd
 --
@@ -10,12 +10,12 @@
 
 local WIDTH = GetScreenWidth()*UIParent:GetEffectiveScale();
 local DEFAULT_OPTIONS = {
-  VERSION=1.05,
+  VERSION=1.06,
   ENABLED=true,
   FRIENDLY=true,
   POSITION={
-    HARMFUL={ 'TOPLEFT', nil, 'TOPLEFT', WIDTH+200, -200 },
-    HELPFUL={ 'TOPLEFT', nil, 'TOPLEFT', 200, -200 }
+    HARMFUL={ 'RIGHT', nil, 'RIGHT', -250, 100 },
+    HELPFUL={ 'LEFT', nil, 'LEFT', 250, 100 }
   },
   BORDERLESS=false,
   ICONS=true,
@@ -35,7 +35,7 @@ OmniPotent = CreateFrame('Frame', 'OmniPotent', UIParent);
 function OmniPotent:Load()
   self.active=false;
   self.version=DEFAULT_OPTIONS.VERSION;
-  self.version_text='v1.0.5';
+  self.version_text='v1.0.6';
   self.frames={};
   self.player={};
   self.objectives=false;
