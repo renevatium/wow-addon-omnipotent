@@ -1,9 +1,13 @@
-OmniPotent v1.2.0
+OmniPotent v1.2.1
 =====================================================================
 Copyright (C) 2014 Lock of War, Developmental (Pty) Ltd
 
 Warlords of Draenor v7.1.5
 ---------------------------------------------------------------------
+18/02/2017
+v1.2.1
+Fixed for updated GetSpecializationInfoByID
+
 15/01/2017
 v1.2.0
 Updated to support patch 7.1.5 (70100)

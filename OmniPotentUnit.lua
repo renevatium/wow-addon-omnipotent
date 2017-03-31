@@ -126,7 +126,7 @@ function OmniPotentUnit:InspectReady(guid)
     local name = GetUnitName(self.unit, true) or 'Unknown';
     local display = self.parent:GetDisplayName(name);
     local id = GetInspectSpecialization(self.unit);
-    local _, spec, _, icon, _, role, class = GetSpecializationInfoByID(id);
+    local id, spec, description, icon, role, class = GetSpecializationInfoByID(id);
     if spec then
       self:SetUnit(self.unit, name, display, class, spec, role, icon, test);
       INSPECT = false;

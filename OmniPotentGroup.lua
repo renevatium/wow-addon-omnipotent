@@ -186,7 +186,7 @@ function OmniPotentGroup:ArenaOpponentUpdate()
     for i=1, self.max do
       local id = GetArenaOpponentSpec(i);
       if id then
-        local _, spec, _, icon, _, role, class = GetSpecializationInfoByID(id);
+        local id, spec, description, icon, role, class = GetSpecializationInfoByID(id);
         if spec then
           local unit = 'arena'..i;
           local name = GetUnitName(unit, true) or 'Unknown';
