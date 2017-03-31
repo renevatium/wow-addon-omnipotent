@@ -22,7 +22,7 @@ for classID=1, MAX_CLASSES do
   local numTabs = GetNumSpecializationsForClassID(classID);
   ROLES[classTag] = {};
   for i=1, numTabs do
-    local id, name, description, icon, background, role = GetSpecializationInfoForClassID(classID, i);
+    local id, name, description, icon, role = GetSpecializationInfoForClassID(classID, i);
     ROLES[classTag][name] = { class=className, role=role, id=id, description=description, icon=icon, spec=name };
   end
 end
