@@ -1,6 +1,6 @@
-## Interface: 70100
+## Interface: 70200
 ## Author: Renevatium
-## Version: 1.2.0
+## Version: 1.2.2
 ## Title: OmniPotent
 ## DefaultState: Enabled
 ## SavedVariables: OMNIPOTENT_OPTIONS

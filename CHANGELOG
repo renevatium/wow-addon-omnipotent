@@ -1,8 +1,14 @@
-OmniPotent v1.2.1
+OmniPotent v1.2.2
 =====================================================================
 Copyright (C) 2014 Lock of War, Developmental (Pty) Ltd
 
-Warlords of Draenor v7.1.5
+Legion v7.2.0
+---------------------------------------------------------------------
+30/03/2017
+v1.2.2
+Updated to support patch 7.2.0 (70200)
+
+Legion v7.1.5
 ---------------------------------------------------------------------
 18/02/2017
 v1.2.1
@@ -13,13 +19,13 @@ v1.2.0
 Updated to support patch 7.1.5 (70100)
 Fixed for updated GetSpecializationInfoForClassID
 
-Warlords of Draenor v7.1.0
+Legion v7.1.0
 ---------------------------------------------------------------------
 28/10/2016
 v1.1.0
 Updated to support patch 7.1.0 (70100)
 
-Warlords of Draenor v7.0.3
+Legion v7.0.3
 ---------------------------------------------------------------------
 16/04/2016
 v1.0.9
